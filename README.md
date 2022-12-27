@@ -1,4 +1,4 @@
-# Get Started with this react starter kit
+# Get Started with this react Boilerplate
 
 this starterkit use flowbite
 
