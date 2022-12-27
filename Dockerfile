@@ -1,8 +1,10 @@
 # How to:
+# git pull
+# docker stop ramareactvite
+# docker rm ramareactvite
 # docker build -t rama-react-vite:1.0 .
 # docker run -itd -p 3000:3000 --name ramareactvite rama-react-vite:1.0
-# docker container stop ramareactvite
-# docker container remove ramareactvite
+
 
 # ==== CONFIGURE =====
 # Use a Node 16 base image

@@ -2,6 +2,8 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function Homepage() {
+  console.log("check env vars");
+  console.log(import.meta.env.VITE_BACKEND_SERVER);
   const navigate = useNavigate();
   return (
     <div>
