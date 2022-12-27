@@ -1,0 +1,53 @@
+{
+  "name": "rama-react-vite-starterkit",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@mantine/carousel": "^5.9.5",
+    "@mantine/core": "^5.9.5",
+    "@mantine/dates": "^5.9.5",
+    "@mantine/dropzone": "^5.9.5",
+    "@mantine/form": "^5.9.5",
+    "@mantine/hooks": "^5.9.5",
+    "@mantine/modals": "^5.9.5",
+    "@mantine/notifications": "^5.9.5",
+    "@mantine/nprogress": "^5.9.5",
+    "@mantine/prism": "^5.9.5",
+    "@mantine/spotlight": "^5.9.5",
+    "@mantine/tiptap": "^5.9.5",
+    "@tabler/icons": "^1.118.0",
+    "@testing-library/react": "^13.4.0",
+    "@tiptap/extension-link": "^2.0.0-beta.209",
+    "@tiptap/react": "^2.0.0-beta.209",
+    "@tiptap/starter-kit": "^2.0.0-beta.209",
+    "axios": "^0.27.2",
+    "dayjs": "^1.11.7",
+    "dotenv": "^16.0.3",
+    "embla-carousel-react": "^7.0.5",
+    "flowbite": "^1.5.2",
+    "flowbite-react": "^0.3.7",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.4.0",
+    "react-router-dom": "^6.3.0",
+    "react-toastify": "^9.0.8",
+    "recoil": "^0.7.5",
+    "recoil-persist": "^4.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.26",
+    "@types/react-dom": "^18.0.9",
+    "@vitejs/plugin-react-swc": "^3.0.0",
+    "autoprefixer": "^10.4.13",
+    "postcss": "^8.4.20",
+    "tailwindcss": "^3.2.4",
+    "vite": "^4.0.0"
+  }
+}
