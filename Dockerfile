@@ -3,7 +3,7 @@
 # docker stop ramareactvite
 # docker rm ramareactvite
 # docker build -t rama-react-vite:1.0 .
-# docker run -itd -p 3000:3000 --name ramareactvite rama-react-vite:1.0
+# docker run -itd -p 9008:3000 --name ramareactvite -e VITE_BACKEND_SERVER=http://localhost:8000 rama-react-vite:1.0
 
 
 # ==== CONFIGURE =====
