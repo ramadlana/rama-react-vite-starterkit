@@ -1,7 +1,7 @@
 export const main_menu = [
   { target: "/", text: "Home" },
   { target: "/example/flowbitecomponents", text: "Flowbite Components" },
-  { target: "/example/menugroup", text: "Others" },
+  { target: "/example/menugroup", text: "Recoil" },
 ];
 
 export const dropdown_menu_1 = {

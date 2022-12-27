@@ -9,11 +9,7 @@ import {
   HiTable,
 } from "react-icons/hi";
 
-import { useState } from "react";
-import { Calendar } from "@mantine/dates";
-
 export default function Dashboard() {
-  const [value, setValue] = useState(null);
   return (
     <>
       <div className="m-20">
@@ -36,7 +32,6 @@ export default function Dashboard() {
         </h1>
         <Card>
           {/* Breadcump */}
-
           <Breadcrumb aria-label="Default breadcrumb example">
             <Breadcrumb.Item href="#" icon={HiHome}>
               Home
@@ -48,7 +43,6 @@ export default function Dashboard() {
             <span className="m-2">Dashboard member area , success login</span>
           </Alert>
         </Card>
-        <Calendar value={value} onChange={setValue} />;
       </div>
     </>
   );
