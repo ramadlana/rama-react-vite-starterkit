@@ -12,7 +12,7 @@ WORKDIR /app
 # Copy ( current dir on host) to ( /app dir on container)
 COPY . .
 # ==== Install dependency =====
-RUN yarn add -g serve
+RUN yarn global add serve
 RUN yarn
 
 # Build the apps
