@@ -5,7 +5,7 @@ steps:
       [
         "build",
         "-t",
-        "gcr.io/rama-lab/github.com/ramadlana/rama-reactjs-starterkit:v1",
+        "gcr.io/zeta-crossbar-371709/github.com/ramadlana/rama-reactjs-starterkit:v1",
         ".",
       ]
 
@@ -15,7 +15,7 @@ steps:
     args:
       [
         "push",
-        "gcr.io/rama-lab/github.com/ramadlana/rama-reactjs-starterkit:v1",
+        "gcr.io/zeta-crossbar-371709/github.com/ramadlana/rama-reactjs-starterkit:v1",
       ]
 
   - name: "gcr.io/cloud-builders/gcloud"
@@ -27,11 +27,11 @@ steps:
         "deploy",
         "reactstarterkit",
         "--port=3000",
-        "--image=gcr.io/rama-lab/github.com/ramadlana/rama-reactjs-starterkit:v1",
+        "--image=gcr.io/zeta-crossbar-371709/github.com/ramadlana/rama-reactjs-starterkit:v1",
         "--allow-unauthenticated",
         "--region=us-central1",
         "--max-instances=1",
-        "--project=rama-lab",
+        "--project=zeta-crossbar-371709",
       ]
 
   - name: "gcr.io/cloud-builders/gcloud"
