@@ -17,7 +17,7 @@ export default function Homepage() {
               Hello There
             </span>
 
-            <span className="text-sm font-medium">Good to see you</span>
+            <span className="text-sm font-medium">Good to see you v2</span>
             <svg
               className="ml-2 w-5 h-5"
               fill="currentColor"
