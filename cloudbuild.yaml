@@ -1,23 +1,26 @@
 steps:
+  # Docker Build
+  # replace using project name or id after gcr.io/
   - name: "gcr.io/cloud-builders/docker"
     id: "build"
     args:
       [
         "build",
         "-t",
-        "gcr.io/rama-lab/github.com/ramadlana/rama-reactjs-starterkit:$SHORT_SHA",
+        "gcr.io/zeta-crossbar-371709/github.com/ramadlana/rama-reactjs-starterkit:$SHORT_SHA",
         ".",
       ]
-
+  # Push Image to registry
+  # gcr.io/project-name-or-id/github.com/ramadlana/rama-reactjs-starterkit:$SHORT_SHA
   - name: "gcr.io/cloud-builders/docker"
     id: "push"
     waitFor: ["build"]
     args:
       [
         "push",
-        "gcr.io/rama-lab/github.com/ramadlana/rama-reactjs-starterkit:$SHORT_SHA",
+        "gcr.io/zeta-crossbar-371709/github.com/ramadlana/rama-reactjs-starterkit:$SHORT_SHA",
       ]
-
+  # Deploy to cloudrun
   - name: "gcr.io/cloud-builders/gcloud"
     id: "deploy"
     waitFor: ["push"]
@@ -27,13 +30,13 @@ steps:
         "deploy",
         "reactstarterkit",
         "--port=3000",
-        "--image=gcr.io/rama-lab/github.com/ramadlana/rama-reactjs-starterkit:$SHORT_SHA",
+        "--image=gcr.io/zeta-crossbar-371709/github.com/ramadlana/rama-reactjs-starterkit:$SHORT_SHA",
         "--allow-unauthenticated",
-        "--region=us-central1",
+        "--region=asia-southeast2-a",
         "--max-instances=1",
-        "--project=rama-lab",
+        "--project=zeta-crossbar-371709",
       ]
-
+  # Update traffic
   - name: "gcr.io/cloud-builders/gcloud"
     id: "update-traffic"
     waitFor: ["deploy"]
@@ -42,7 +45,7 @@ steps:
         "run",
         "services",
         "update-traffic",
-        "reactstarterkit",
+        "react-starter-kit-vite",
         "--to-latest",
-        "--region=us-central1",
+        "--region=asia-southeast2-a",
       ]
