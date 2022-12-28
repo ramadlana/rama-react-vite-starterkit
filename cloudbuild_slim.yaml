@@ -1,4 +1,6 @@
+projectname:
 steps:
+  # Docker Build
   - name: "gcr.io/cloud-builders/docker"
     id: "build"
     args:
@@ -8,7 +10,7 @@ steps:
         "gcr.io/zeta-crossbar-371709/github.com/ramadlana/rama-reactjs-starterkit:v1",
         ".",
       ]
-
+  # Push Image to registry
   - name: "gcr.io/cloud-builders/docker"
     id: "push"
     waitFor: ["build"]
@@ -17,7 +19,7 @@ steps:
         "push",
         "gcr.io/zeta-crossbar-371709/github.com/ramadlana/rama-reactjs-starterkit:v1",
       ]
-
+  # Deploy to cloudrun
   - name: "gcr.io/cloud-builders/gcloud"
     id: "deploy"
     waitFor: ["push"]
@@ -33,7 +35,7 @@ steps:
         "--max-instances=1",
         "--project=zeta-crossbar-371709",
       ]
-
+  # Update traffic
   - name: "gcr.io/cloud-builders/gcloud"
     id: "update-traffic"
     waitFor: ["deploy"]
