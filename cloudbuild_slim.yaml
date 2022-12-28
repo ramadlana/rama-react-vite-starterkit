@@ -1,4 +1,3 @@
-projectname:
 steps:
   # Docker Build
   - name: "gcr.io/cloud-builders/docker"
@@ -11,6 +10,7 @@ steps:
         ".",
       ]
   # Push Image to registry
+  # gcr.io/project-name-or-id/github.com/ramadlana/rama-reactjs-starterkit:v1
   - name: "gcr.io/cloud-builders/docker"
     id: "push"
     waitFor: ["build"]
